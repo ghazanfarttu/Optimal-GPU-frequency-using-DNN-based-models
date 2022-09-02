@@ -1,0 +1,75 @@
+runspec vv2989 started at Tue Aug 16 02:32:06 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv bplustree -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 140.bplustree
+outputs   = csv
+username  = root
+Benchmarks selected: 140.bplustree
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 140.bplustree base compsys default
+
+
+Setting Up Run Directories
+  Setting up 140.bplustree ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 140.bplustree ref base compsys default [Tue Aug 16 02:32:07 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/140.bplustree/run/run_base_ref_compsys.0000
+    -o bplustree.out -e bplustree.err ../run_base_ref_compsys.0000/bplustree_exe_base.compsys --platform NVIDIA --device GPU file ./mil.txt command ./command.txt (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/140.bplustree/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/140.bplustree/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Tue Aug 16 02:32:07 2022 (1660617127.43134)
+Stop command: Tue Aug 16 02:32:16 2022 (1660617136.54928)
+Elapsed time for command: 00:00:09 (9.11794710159302)
+Workload elapsed time (0:1) = 9.115178 seconds
+Copy 0 of 140.bplustree (base ref) run 1 finished at Tue Aug 16 02:32:16 2022.  Total elapsed time: 9.115178
+comparing files in '/usr/accel/benchspec/ACCEL/140.bplustree/run/run_base_ref_compsys.0000'
+comparing 'output.txt' with abstol=2.5e-05, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0025, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/140.bplustree/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/140.bplustree/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Tue Aug 16 02:32:16 2022 (1660617136.56068)
+Stop command: Tue Aug 16 02:32:19 2022 (1660617139.18776)
+Elapsed time for command: 00:00:02 (2.62707495689392)
+Benchmark Times:
+  Start:    Tue Aug 16 02:32:07 2022 (1660617127)
+  Stop:     Tue Aug 16 02:32:16 2022 (1660617136)
+  Elapsed:  00:00:09 (9)
+  Reported: 9 115246000 9.115246
+ Success 140.bplustree base ref ratio=11.85, runtime=9.115246, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x140.bplustree
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.1805.opencl.ref.rsf
+Parsing flags for 140.bplustree base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.1805.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.1805.log
+
+runspec finished at Tue Aug 16 02:32:19 2022; 13 total seconds elapsed

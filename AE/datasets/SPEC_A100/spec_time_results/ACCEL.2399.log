@@ -1,0 +1,75 @@
+runspec vv2989 started at Tue Aug 16 09:18:43 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv spmv -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 112.spmv
+outputs   = csv
+username  = root
+Benchmarks selected: 112.spmv
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 112.spmv base compsys default
+
+
+Setting Up Run Directories
+  Setting up 112.spmv ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 112.spmv ref base compsys default [Tue Aug 16 09:18:44 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/112.spmv/run/run_base_ref_compsys.0000
+    -o spmv.out -e spmv.err ../run_base_ref_compsys.0000/spmv_exe_base.compsys --platform NVIDIA --device GPU -i msdoor.mtx,vector.txt -o msdoor.mtx.out -- 50000 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/112.spmv/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/112.spmv/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Tue Aug 16 09:18:44 2022 (1660641524.68133)
+Stop command: Tue Aug 16 09:18:59 2022 (1660641539.21526)
+Elapsed time for command: 00:00:14 (14.5339319705963)
+Workload elapsed time (0:1) = 14.530943 seconds
+Copy 0 of 112.spmv (base ref) run 1 finished at Tue Aug 16 09:18:59 2022.  Total elapsed time: 14.530943
+comparing files in '/usr/accel/benchspec/ACCEL/112.spmv/run/run_base_ref_compsys.0000'
+comparing 'msdoor.mtx.out' with abstol=0.01, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.004, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/112.spmv/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/112.spmv/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Tue Aug 16 09:18:59 2022 (1660641539.22707)
+Stop command: Tue Aug 16 09:19:00 2022 (1660641540.9634)
+Elapsed time for command: 00:00:01 (1.73633480072021)
+Benchmark Times:
+  Start:    Tue Aug 16 09:18:44 2022 (1660641524)
+  Stop:     Tue Aug 16 09:18:59 2022 (1660641539)
+  Elapsed:  00:00:15 (15)
+  Reported: 14 531008000 14.531008
+ Success 112.spmv base ref ratio=10.12, runtime=14.531008, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x112.spmv
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.2399.opencl.ref.rsf
+Parsing flags for 112.spmv base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.2399.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.2399.log
+
+runspec finished at Tue Aug 16 09:19:01 2022; 18 total seconds elapsed

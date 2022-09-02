@@ -1,0 +1,75 @@
+runspec vv2989 started at Mon Aug 15 21:41:50 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv fft -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 110.fft
+outputs   = csv
+username  = root
+Benchmarks selected: 110.fft
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 110.fft base compsys default
+
+
+Setting Up Run Directories
+  Setting up 110.fft ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 110.fft ref base compsys default [Mon Aug 15 21:41:51 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/110.fft/run/run_base_ref_compsys.0000
+    -o fft.out -e fft.err ../run_base_ref_compsys.0000/fft_exe_base.compsys --platform NVIDIA --device GPU -i small/array.bin -o result.dat 256 102400 1600 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/110.fft/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/110.fft/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Mon Aug 15 21:41:51 2022 (1660599711.33282)
+Stop command: Mon Aug 15 21:41:55 2022 (1660599715.83565)
+Elapsed time for command: 00:00:04 (4.50282788276672)
+Workload elapsed time (0:1) = 4.499864 seconds
+Copy 0 of 110.fft (base ref) run 1 finished at Mon Aug 15 21:41:55 2022.  Total elapsed time: 4.499864
+comparing files in '/usr/accel/benchspec/ACCEL/110.fft/run/run_base_ref_compsys.0000'
+comparing 'result.dat' with abstol=0.001, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.009, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/110.fft/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/110.fft/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Mon Aug 15 21:41:55 2022 (1660599715.8471)
+Stop command: Mon Aug 15 21:42:02 2022 (1660599722.22517)
+Elapsed time for command: 00:00:06 (6.37807083129883)
+Benchmark Times:
+  Start:    Mon Aug 15 21:41:51 2022 (1660599711)
+  Stop:     Mon Aug 15 21:41:55 2022 (1660599715)
+  Elapsed:  00:00:04 (4)
+  Reported: 4 499929000 4.499929
+ Success 110.fft base ref ratio=24.67, runtime=4.499929, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x110.fft
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.1372.opencl.ref.rsf
+Parsing flags for 110.fft base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.1372.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.1372.log
+
+runspec finished at Mon Aug 15 21:42:02 2022; 12 total seconds elapsed

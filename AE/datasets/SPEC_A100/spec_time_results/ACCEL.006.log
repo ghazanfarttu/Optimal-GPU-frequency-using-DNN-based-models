@@ -1,0 +1,443 @@
+runspec vv2989 started at Mon Aug 15 06:48:03 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv mriq -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 114.mriq
+outputs   = csv
+username  = root
+Benchmarks selected: 114.mriq
+When checking options for /usr/accel/benchspec/ACCEL/114.mriq/exe/mriq_exe_base.compsys, no MD5 sums were
+  found in the config file.  They will be installed after build.
+When checking options for /usr/accel/benchspec/ACCEL/114.mriq/exe/mriq_exe_base.compsys, no MD5 sums were
+  found in the config file.  They will be installed after build.
+When checking options for /usr/accel/benchspec/ACCEL/114.mriq/exe/mriq_exe_base.compsys, no MD5 sums were
+  found in the config file.  They will be installed after build.
+Compiling Binaries
+
+------------------------------------------------------------------------
+When checking options for /usr/accel/benchspec/ACCEL/114.mriq/exe/mriq_exe_base.compsys, no MD5 sums were
+  found in the config file.  They will be installed after build.
+  Building 114.mriq base compsys default: (build_base_compsys.0000) [Mon Aug 15 06:48:05 2022]
+Wrote to makefile '/usr/accel/benchspec/ACCEL/114.mriq/build/build_base_compsys.0000/Makefile.deps':
+
+# These are the build dependencies
+
+$(addsuffix $(OBJ), $(basename file.c)): file.c file.h
+$(addsuffix $(OBJ), $(basename computeQ.c)): computeQ.c computeQ.h ocl.h macros.h
+$(addsuffix $(OBJ), $(basename ocl.c)): ocl.c ocl.h
+$(addsuffix $(OBJ), $(basename pbcommon_sources/args.c)): pbcommon_sources/args.c pbcommon_sources/parboil.h
+$(addsuffix $(OBJ), $(basename main.c)): main.c computeQ.h file.h macros.h ocl.h pbcommon_sources/parboil.h
+$(addsuffix $(OBJ), $(basename pbcommon_sources/parboil_opencl.c)): pbcommon_sources/parboil_opencl.c pbcommon_sources/parboil.h
+# End dependencies
+Wrote to makefile '/usr/accel/benchspec/ACCEL/114.mriq/build/build_base_compsys.0000/Makefile.spec':
+TUNE=base
+EXT=compsys
+NUMBER=114
+NAME=mriq
+SOURCES= main.c ocl.c file.c computeQ.c pbcommon_sources/parboil_opencl.c \
+	 pbcommon_sources/args.c
+EXEBASE=mriq_exe
+NEED_MATH=yes
+BENCHLANG=C
+ONESTEP=
+CONESTEP=
+
+BENCH_FLAGS      = 
+CC               = gcc
+CXX              = g++
+EXTRA_CFLAGS     = -I/usr/local/cuda/include
+EXTRA_CXXFLAGS   = -I/usr/local/cuda/include
+EXTRA_LIBS       = 
+FC               = gfortran
+FPBASE           = yes
+LIBS             = -L/usr/local/cuda/lib64 -lOpenCL
+OPTIMIZE         = -O2
+OS               = unix
+absolutely_no_locking = 0
+abstol           = 0.002
+action           = validate
+allow_extension_override = 0
+backup_config    = 1
+baseexe          = mriq_exe
+basepeak         = 0
+benchdir         = benchspec
+benchmark        = 114.mriq
+binary           = 
+bindir           = exe
+builddir         = build
+bundleaction     = 
+bundlename       = 
+calctol          = 
+changedmd5       = 0
+check_md5        = 1
+check_version    = 1
+clean_between_builds = no
+command_add_redirect = 0
+commanderrfile   = speccmds.err
+commandexe       = mriq_exe_base.compsys
+commandfile      = speccmds.cmd
+commandoutfile   = speccmds.out
+commandstdoutfile = speccmds.stdout
+compareerrfile   = compare.err
+comparefile      = compare.cmd
+compareoutfile   = compare.out
+comparestdoutfile = compare.stdout
+compile_error    = 0
+compwhite        = 
+configdir        = config
+configpath       = /usr/accel/config/opencl-nvidia-a100.cfg
+copies           = 1
+current_range    = 
+datadir          = data
+default_size     = ref
+delay            = 0
+deletebinaries   = 0
+deletework       = 0
+dependent_workloads = 0
+device           = GPU
+difflines        = 10
+dirprot          = 511
+discard_power_samples = 1
+display_order    = 1a
+endian           = 12345678
+env_vars         = 0
+expand_notes     = 0
+expid            = 
+ext              = compsys
+exthash_bits     = 256
+fake             = 0
+feedback         = 1
+flag_url_base    = http://www.spec.org/auto/accel/flags/
+floatcompare     = 
+http_proxy       = 
+http_timeout     = 30
+hw_cpu           = 350 MHz Computer System processor
+hw_cpu_mhz       = 350
+hw_cpu_name      = AMD EPYC 7763 64-Core
+hw_disk          = 1.7 TB  add more disk info here
+hw_memory        = 4 GB
+hw_memory001     = 503.374 GB fixme: If using DDR3, format is:
+hw_memory002     = 'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+hw_model         = Computer System XXX
+hw_nchips        = 2
+hw_vendor        = Computer System Incorporated
+idle_current_range = 
+idledelay        = 10
+idleduration     = 60
+ignore_errors    = 1
+ignore_sigint    = 0
+ignorecase       = 
+info_wrap_columns = 50
+inputdir         = input
+iteration        = -1
+iterations       = 1
+keeptmp          = 0
+license_num      = 
+line_width       = 0
+locking          = 1
+log              = ACCEL
+log_line_width   = 0
+log_timestamp    = 0
+logname          = /usr/accel/result/ACCEL.006.log
+lognum           = 006
+mach             = default
+mail_reports     = all
+mailcompress     = 0
+mailmethod       = smtp
+mailport         = 25
+mailserver       = 127.0.0.1
+mailto           = 
+make             = specmake
+make_no_clobber  = 0
+makefile_template = Makefile.YYYtArGeTYYYspec
+makeflags        = 
+max_active_compares = 0
+max_average_uncertainty = 1
+max_hum_limit    = 0
+max_report_runs  = 3
+max_unknown_uncertainty = 1
+mean_anyway      = 0
+meter_connect_timeout = 30
+meter_errors_default = 5
+meter_errors_percentage = 5
+min_report_runs  = 3
+min_temp_limit   = 20
+minimize_builddirs = 0
+minimize_rundirs = 0
+name             = mriq
+need_math        = yes
+no_input_handler = close
+no_monitor       = 
+note_preenv      = 0
+notes_plat_sysinfo_000 =  Sysinfo program /usr/accel/Docs/sysinfo
+notes_plat_sysinfo_005 =  $Rev: 6965 $ $Date:: 2015-04-21 \#$ c05a7f14b1b1765e3fe1df68447e8a35
+notes_plat_sysinfo_010 =  running on ga100.novalocal Mon Aug 15 06:48:05 2022
+notes_plat_sysinfo_015 = 
+notes_plat_sysinfo_020 =  This section contains SUT (System Under Test) info as seen by
+notes_plat_sysinfo_025 =  some common utilities.  To remove or add to this section, see:
+notes_plat_sysinfo_030 =    http://www.spec.org/accel/Docs/config.html\#sysinfo
+notes_plat_sysinfo_035 = 
+notes_plat_sysinfo_040 =  From /proc/cpuinfo
+notes_plat_sysinfo_045 =     model name : AMD EPYC 7763 64-Core Processor
+notes_plat_sysinfo_050 =        2 "physical id"s (chips)
+notes_plat_sysinfo_055 =        256 "processors"
+notes_plat_sysinfo_060 =     cores, siblings (Caution: counting these is hw and system dependent.  The
+notes_plat_sysinfo_065 =     following excerpts from /proc/cpuinfo might not be reliable.  Use with
+notes_plat_sysinfo_070 =     caution.)
+notes_plat_sysinfo_075 =        cpu cores : 64
+notes_plat_sysinfo_080 =        siblings  : 128
+notes_plat_sysinfo_085 =        physical 0: cores 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+notes_plat_sysinfo_090 =        22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46
+notes_plat_sysinfo_095 =        47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+notes_plat_sysinfo_100 =        physical 1: cores 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+notes_plat_sysinfo_105 =        22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46
+notes_plat_sysinfo_110 =        47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+notes_plat_sysinfo_115 =     cache size : 512 KB
+notes_plat_sysinfo_120 = 
+notes_plat_sysinfo_125 =  From /proc/meminfo
+notes_plat_sysinfo_130 =     MemTotal:       527826000 kB
+notes_plat_sysinfo_135 =     HugePages_Total:       0
+notes_plat_sysinfo_140 =     Hugepagesize:       2048 kB
+notes_plat_sysinfo_145 = 
+notes_plat_sysinfo_150 =  /usr/bin/lsb_release -d
+notes_plat_sysinfo_155 =     CentOS Linux release 7.9.2009 (Core)
+notes_plat_sysinfo_160 = 
+notes_plat_sysinfo_165 =  From /etc/*release* /etc/*version*
+notes_plat_sysinfo_170 =     centos-release: CentOS Linux release 7.9.2009 (Core)
+notes_plat_sysinfo_175 =     centos-release-upstream: Derived from Red Hat Enterprise Linux 7.9 (Source)
+notes_plat_sysinfo_180 =     os-release:
+notes_plat_sysinfo_185 =        NAME="CentOS Linux"
+notes_plat_sysinfo_190 =        VERSION="7 (Core)"
+notes_plat_sysinfo_195 =        ID="centos"
+notes_plat_sysinfo_200 =        ID_LIKE="rhel fedora"
+notes_plat_sysinfo_205 =        VERSION_ID="7"
+notes_plat_sysinfo_210 =        PRETTY_NAME="CentOS Linux 7 (Core)"
+notes_plat_sysinfo_215 =        ANSI_COLOR="0;31"
+notes_plat_sysinfo_220 =        CPE_NAME="cpe:/o:centos:centos:7"
+notes_plat_sysinfo_225 =     redhat-release: CentOS Linux release 7.9.2009 (Core)
+notes_plat_sysinfo_230 =     system-release: CentOS Linux release 7.9.2009 (Core)
+notes_plat_sysinfo_235 =     system-release-cpe: cpe:/o:centos:centos:7
+notes_plat_sysinfo_240 = 
+notes_plat_sysinfo_245 =  uname -a:
+notes_plat_sysinfo_250 =     Linux ga100.novalocal 3.10.0-1160.49.1.el7.x86_64 \#1 SMP Tue Nov 30 15:51:32
+notes_plat_sysinfo_255 =     UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+notes_plat_sysinfo_260 = 
+notes_plat_sysinfo_265 =  run-level 3 Aug 15 06:23
+notes_plat_sysinfo_270 = 
+notes_plat_sysinfo_275 =  SPEC is set to: /usr/accel
+notes_plat_sysinfo_280 =     Filesystem     Type  Size  Used Avail Use% Mounted on
+notes_plat_sysinfo_285 =     /dev/nvme0n1p3 ext4  1.7T   17G  1.6T   2% /
+notes_plat_sysinfo_290 =  Additional information from dmidecode:
+notes_plat_sysinfo_295 = 
+notes_plat_sysinfo_300 =     Warning: Use caution when you interpret this section. The 'dmidecode' program
+notes_plat_sysinfo_305 =     reads system data which is "intended to allow hardware to be accurately
+notes_plat_sysinfo_310 =     determined", but the intent may not be met, as there are frequent changes to
+notes_plat_sysinfo_315 =     hardware, firmware, and the "DMTF SMBIOS" standard.
+notes_plat_sysinfo_320 = 
+notes_plat_sysinfo_325 =    BIOS Dell Inc. 2.6.6 01/13/2022
+notes_plat_sysinfo_330 =    Memory:
+notes_plat_sysinfo_335 =     8x 80AD80B380AD HMA84GR7DJR4N-XN 32 GB 2 rank 3200 MT/s
+notes_plat_sysinfo_340 =     8x 80CE869D80CE M393A4K40EB3-CWE 32 GB 2 rank 3200 MT/s
+notes_plat_sysinfo_345 = 
+notes_plat_sysinfo_350 =  (End of data from sysinfo program)
+notes_wrap_columns = 0
+notes_wrap_indent =   
+num              = 114
+obiwan           = 
+os_exe_ext       = 
+output_format    = csv
+output_root      = 
+outputdir        = output
+parallel_setup   = 1
+parallel_setup_prefork = 
+parallel_setup_type = fork
+parallel_test    = 0
+parallel_test_submit = 0
+parallel_test_workloads = 
+path             = /usr/accel/benchspec/ACCEL/114.mriq
+plain_train      = 0
+platform         = NVIDIA
+power            = 0
+preenv           = 1
+prefix           = 
+prepared_by      = root  (is never output, only tags rawfile)
+ranks            = -1
+rate             = 0
+rawhash_bits     = 256
+rebuild          = 0
+reftime          = reftime
+reltol           = 0.002
+reportable       = 0
+resultdir        = result
+review           = 0
+run              = all
+rundir           = run
+runspec          = /usr/accel/bin/runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv mriq -I
+safe_eval        = 1
+section_specifier_fatal = 1
+sendmail         = /usr/sbin/sendmail
+setprocgroup     = 1
+setup_error      = 0
+shrate           = 0
+sigint           = 2
+size             = ref
+size_class       = ref
+skipabstol       = 
+skipobiwan       = 
+skipreltol       = 
+skiptol          = 
+smarttune        = base
+specdiff         = specdiff
+specrun          = specinvoke
+speed            = 0
+srcalt           = 
+srcdir           = src
+srcsource        = /usr/accel/benchspec/ACCEL/114.mriq/src
+stagger          = 10
+strict_rundir_verify = 0
+sw_compiler      = Computer System Compiler C and Fortran90
+sw_file          = ext4
+sw_os            = Computer System Unix Version YYY
+sw_os001         = CentOS Linux release 7.9.2009 (Core)
+sw_os002         = 3.10.0-1160.49.1.el7.x86_64
+sw_state         = Run level 3 (add definition here)
+sysinfo_program  = specperl /usr/accel/Docs/sysinfo
+table            = 1
+teeout           = no
+teerunout        = yes
+test_date        = Aug-2022
+threads          = -1
+top              = /usr/accel
+train_with       = train
+tune             = base
+uid              = 0
+unbuffer         = 1
+uncertainty_exception = 5
+update-flags     = 0
+use_submit_for_speed = 1
+username         = root
+verbose          = 5
+version          = 77
+version_url      = http://www.spec.org/auto/accel/current_version
+voltage_range    = 
+worklist         = list
+OUTPUT_RMFILES   = 32_32_32_dataset.out
+  Compile for '114.mriq' started at: Mon Aug 15 06:48:05 2022 (1660546085)
+Issuing make.clean command 'specmake clean'
+Start make.clean command: Mon Aug 15 06:48:05 2022 (1660546085.12152)
+Command output:
+rm -rf *.o  32_32_32_dataset.out
+find . \( -name \*.o -o -name '*.fppized.f*' -o -name '*.i' -o -name '*.mod' \) -print | xargs rm -rf
+rm -rf mriq_exe
+rm -rf mriq_exe.exe
+rm -rf core
+rm -rf 
+
+Stop make.clean command: Mon Aug 15 06:48:05 2022 (1660546085.13141)
+Elapsed time for make.clean command: 00:00:00 (0.00988388061523438)
+Issuing make command 'specmake build'
+Start make command: Mon Aug 15 06:48:05 2022 (1660546085.1318)
+Command output:
+gcc -c -o main.o -DSPEC -DSPEC_ACCEL -DNDEBUG   -O2          -I/usr/local/cuda/include       main.c
+gcc -c -o ocl.o -DSPEC -DSPEC_ACCEL -DNDEBUG   -O2          -I/usr/local/cuda/include       ocl.c
+gcc -c -o file.o -DSPEC -DSPEC_ACCEL -DNDEBUG   -O2          -I/usr/local/cuda/include       file.c
+gcc -c -o computeQ.o -DSPEC -DSPEC_ACCEL -DNDEBUG   -O2          -I/usr/local/cuda/include       computeQ.c
+gcc -c -o pbcommon_sources/parboil_opencl.o -DSPEC -DSPEC_ACCEL -DNDEBUG   -O2          -I/usr/local/cuda/include       pbcommon_sources/parboil_opencl.c
+gcc -c -o pbcommon_sources/args.o -DSPEC -DSPEC_ACCEL -DNDEBUG   -O2          -I/usr/local/cuda/include       pbcommon_sources/args.c
+gcc  -O2           main.o ocl.o file.o computeQ.o pbcommon_sources/parboil_opencl.o pbcommon_sources/args.o           -L/usr/local/cuda/lib64 -lOpenCL  -lm        -o mriq_exe
+
+Stop make command: Mon Aug 15 06:48:05 2022 (1660546085.50661)
+Elapsed time for make command: 00:00:00 (0.374813079833984)
+Issuing options command 'specmake options'
+Start options command: Mon Aug 15 06:48:05 2022 (1660546085.50702)
+Command output:
+COMP: gcc -c -o options.o -DSPEC -DSPEC_ACCEL -DNDEBUG   -O2          -I/usr/local/cuda/include       <source>
+C: CC="gcc"
+C: COBJOPT="-c -o options"
+P: CPUFLAGS="-DSPEC -DSPEC_ACCEL -DNDEBUG"
+P: BENCH_FLAGS=""
+P: BENCH_CFLAGS=""
+O: OPTIMIZE="-O2"
+O: COPTIMIZE=""
+P: PORTABILITY=""
+P: CPORTABILITY=""
+O: EXTRA_CFLAGS="-I/usr/local/cuda/include"
+O: EXTRA_OPTIMIZE=""
+O: EXTRA_COPTIMIZE=""
+P: EXTRA_PORTABILITY=""
+P: EXTRA_CPORTABILITY=""
+LINK: gcc  -O2           <objects> -L/usr/local/cuda/lib64 -lOpenCL  -lm        -o options
+C: LD="gcc"
+O: OPTIMIZE="-O2"
+O: LIBS="-L/usr/local/cuda/lib64 -lOpenCL"
+C: MATH_LIBS="-lm"
+C: LDOUT="-o options"
+
+Stop options command: Mon Aug 15 06:48:05 2022 (1660546085.52477)
+Elapsed time for options command: 00:00:00 (0.0177459716796875)
+  Compile for '114.mriq' ended at: Mon Aug 15 06:48:05 2022 (1660546085)
+  Elapsed compile for '114.mriq': 00:00:00 (0)
+
+Build successes: 114.mriq(base)
+
+Setting Up Run Directories
+  Setting up 114.mriq ref base compsys default: created (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 114.mriq ref base compsys default [Mon Aug 15 06:48:05 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000
+    -o mriq.out -e mriq.err ../run_base_ref_compsys.0000/mriq_exe_base.compsys --platform NVIDIA --device GPU -i 128x128x128.bin -o 128x128x128.out -- 200000 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Mon Aug 15 06:48:05 2022 (1660546085.61647)
+Stop command: Mon Aug 15 06:48:09 2022 (1660546089.06848)
+Elapsed time for command: 00:00:03 (3.45200610160828)
+Workload elapsed time (0:1) = 3.449245 seconds
+Copy 0 of 114.mriq (base ref) run 1 finished at Mon Aug 15 06:48:09 2022.  Total elapsed time: 3.449245
+comparing files in '/usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000'
+comparing '128x128x128.out' with abstol=0.002, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Mon Aug 15 06:48:09 2022 (1660546089.08007)
+Stop command: Mon Aug 15 06:48:17 2022 (1660546097.17611)
+Elapsed time for command: 00:00:08 (8.09604382514954)
+Benchmark Times:
+  Start:    Mon Aug 15 06:48:05 2022 (1660546085)
+  Stop:     Mon Aug 15 06:48:09 2022 (1660546089)
+  Elapsed:  00:00:04 (4)
+  Reported: 3 449317000 3.449317
+ Success 114.mriq base ref ratio=31.60, runtime=3.449317, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x114.mriq
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.006.opencl.ref.rsf
+Parsing flags for 114.mriq base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.006.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.006.log
+
+runspec finished at Mon Aug 15 06:48:17 2022; 14 total seconds elapsed

@@ -1,0 +1,75 @@
+runspec vv2989 started at Tue Aug 16 15:04:16 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv srad -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 127.srad
+outputs   = csv
+username  = root
+Benchmarks selected: 127.srad
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 127.srad base compsys default
+
+
+Setting Up Run Directories
+  Setting up 127.srad ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 127.srad ref base compsys default [Tue Aug 16 15:04:17 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/127.srad/run/run_base_ref_compsys.0000
+    -o srad.out -e srad.err ../run_base_ref_compsys.0000/srad_exe_base.compsys --platform NVIDIA --device GPU 6500 0.5 4016 3664 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/127.srad/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/127.srad/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Tue Aug 16 15:04:17 2022 (1660662257.98177)
+Stop command: Tue Aug 16 15:04:30 2022 (1660662270.63675)
+Elapsed time for command: 00:00:12 (12.6549820899963)
+Workload elapsed time (0:1) = 12.652057 seconds
+Copy 0 of 127.srad (base ref) run 1 finished at Tue Aug 16 15:04:30 2022.  Total elapsed time: 12.652057
+comparing files in '/usr/accel/benchspec/ACCEL/127.srad/run/run_base_ref_compsys.0000'
+comparing 'image_out.pgm' with abstol=2.5e-05, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0025, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/127.srad/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/127.srad/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Tue Aug 16 15:04:30 2022 (1660662270.64836)
+Stop command: Tue Aug 16 15:04:31 2022 (1660662271.65109)
+Elapsed time for command: 00:00:01 (1.00272798538208)
+Benchmark Times:
+  Start:    Tue Aug 16 15:04:17 2022 (1660662257)
+  Stop:     Tue Aug 16 15:04:30 2022 (1660662270)
+  Elapsed:  00:00:13 (13)
+  Reported: 12 652125000 12.652125
+ Success 127.srad base ref ratio=9.01, runtime=12.652125, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x127.srad
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.2886.opencl.ref.rsf
+Parsing flags for 127.srad base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.2886.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.2886.log
+
+runspec finished at Tue Aug 16 15:04:32 2022; 16 total seconds elapsed

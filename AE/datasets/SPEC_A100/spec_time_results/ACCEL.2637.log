@@ -1,0 +1,75 @@
+runspec vv2989 started at Tue Aug 16 12:06:26 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv lud -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 125.lud
+outputs   = csv
+username  = root
+Benchmarks selected: 125.lud
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 125.lud base compsys default
+
+
+Setting Up Run Directories
+  Setting up 125.lud ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 125.lud ref base compsys default [Tue Aug 16 12:06:27 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/125.lud/run/run_base_ref_compsys.0000
+    -o lud.out -e lud.err ../run_base_ref_compsys.0000/lud_exe_base.compsys --platform NVIDIA --device GPU -i 16000 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/125.lud/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/125.lud/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Tue Aug 16 12:06:27 2022 (1660651587.30239)
+Stop command: Tue Aug 16 12:06:43 2022 (1660651603.13869)
+Elapsed time for command: 00:00:15 (15.836296081543)
+Workload elapsed time (0:1) = 15.833262 seconds
+Copy 0 of 125.lud (base ref) run 1 finished at Tue Aug 16 12:06:43 2022.  Total elapsed time: 15.833262
+comparing files in '/usr/accel/benchspec/ACCEL/125.lud/run/run_base_ref_compsys.0000'
+comparing 'result.txt' with abstol=0.0005, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0005, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/125.lud/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/125.lud/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Tue Aug 16 12:06:43 2022 (1660651603.15011)
+Stop command: Tue Aug 16 12:06:43 2022 (1660651603.49677)
+Elapsed time for command: 00:00:00 (0.346661806106567)
+Benchmark Times:
+  Start:    Tue Aug 16 12:06:27 2022 (1660651587)
+  Stop:     Tue Aug 16 12:06:43 2022 (1660651603)
+  Elapsed:  00:00:16 (16)
+  Reported: 15 833329000 15.833329
+ Success 125.lud base ref ratio=7.52, runtime=15.833329, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x125.lud
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.2637.opencl.ref.rsf
+Parsing flags for 125.lud base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.2637.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.2637.log
+
+runspec finished at Tue Aug 16 12:06:44 2022; 18 total seconds elapsed

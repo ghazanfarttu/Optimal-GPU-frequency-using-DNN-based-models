@@ -1,0 +1,292 @@
+spec.accel.hw_accel_connect: --
+spec.accel.hw_accel_desc: --
+spec.accel.hw_accel_ecc: --
+spec.accel.hw_accel_model: --
+spec.accel.hw_accel_name: --
+spec.accel.hw_accel_type: --
+spec.accel.hw_accel_vendor: --
+spec.accel.hw_avail: --
+spec.accel.hw_cpu_char: 
+spec.accel.hw_cpu_max_mhz: --
+spec.accel.hw_cpu_mhz: 350
+spec.accel.hw_cpu_name: AMD EPYC 7763 64-Core
+spec.accel.hw_disk: 1.7 TB  add more disk info here
+spec.accel.hw_fpu: --
+spec.accel.hw_memory000: 4 GB
+spec.accel.hw_memory001: 503.374 GB fixme: If using DDR3, format is:
+spec.accel.hw_memory002: 'N GB (M x N GB nRxn PCn-nnnnnR-n, ECC)'
+spec.accel.hw_model: Computer System XXX
+spec.accel.hw_nchips: 2
+spec.accel.hw_ncores: --
+spec.accel.hw_ncoresperchip: --
+spec.accel.hw_ncpuorder: --
+spec.accel.hw_nthreadspercore: --
+spec.accel.hw_ocache: --
+spec.accel.hw_other: --
+spec.accel.hw_pcache: --
+spec.accel.hw_scache: --
+spec.accel.hw_tcache: --
+spec.accel.hw_vendor: Computer System Incorporated
+spec.accel.license_num: 
+spec.accel.prepared_by: root  (is never output, only tags rawfile)
+spec.accel.sw_accel_driver: --
+spec.accel.sw_avail: --
+spec.accel.sw_base_ptrsize: --
+spec.accel.sw_compiler: Computer System Compiler C and Fortran90
+spec.accel.sw_file: ext4
+spec.accel.sw_os000: Computer System Unix Version YYY
+spec.accel.sw_os001: CentOS Linux release 7.9.2009 (Core)
+spec.accel.sw_os002: 3.10.0-1160.49.1.el7.x86_64
+spec.accel.sw_other: --
+spec.accel.sw_parallel_other: --
+spec.accel.sw_peak_ptrsize: Not Applicable
+spec.accel.sw_state: Run level 3 (add definition here)
+spec.accel.test_date: Aug-2022
+spec.accel.test_sponsor: Computer System Incorporated
+spec.accel.tester: Computer System Incorporated
+spec.accel.notes_plat_sysinfo_000:  Sysinfo program /usr/accel/Docs/sysinfo
+spec.accel.notes_plat_sysinfo_005:  $Rev: 6965 $ $Date:: 2015-04-21 #$ c05a7f14b1b1765e3fe1df68447e8a35
+spec.accel.notes_plat_sysinfo_010:  running on ga100.novalocal Tue Aug 16 17:36:28 2022
+spec.accel.notes_plat_sysinfo_015: 
+spec.accel.notes_plat_sysinfo_020:  This section contains SUT (System Under Test) info as seen by
+spec.accel.notes_plat_sysinfo_025:  some common utilities.  To remove or add to this section, see:
+spec.accel.notes_plat_sysinfo_030:    http://www.spec.org/accel/Docs/config.html#sysinfo
+spec.accel.notes_plat_sysinfo_035: 
+spec.accel.notes_plat_sysinfo_040:  From /proc/cpuinfo
+spec.accel.notes_plat_sysinfo_045:     model name : AMD EPYC 7763 64-Core Processor
+spec.accel.notes_plat_sysinfo_050:        2 "physical id"s (chips)
+spec.accel.notes_plat_sysinfo_055:        256 "processors"
+spec.accel.notes_plat_sysinfo_060:     cores, siblings (Caution: counting these is hw and system dependent.  The
+spec.accel.notes_plat_sysinfo_065:     following excerpts from /proc/cpuinfo might not be reliable.  Use with
+spec.accel.notes_plat_sysinfo_070:     caution.)
+spec.accel.notes_plat_sysinfo_075:        cpu cores : 64
+spec.accel.notes_plat_sysinfo_080:        siblings  : 128
+spec.accel.notes_plat_sysinfo_085:        physical 0: cores 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+spec.accel.notes_plat_sysinfo_090:        22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46
+spec.accel.notes_plat_sysinfo_095:        47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+spec.accel.notes_plat_sysinfo_100:        physical 1: cores 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+spec.accel.notes_plat_sysinfo_105:        22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46
+spec.accel.notes_plat_sysinfo_110:        47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+spec.accel.notes_plat_sysinfo_115:     cache size : 512 KB
+spec.accel.notes_plat_sysinfo_120: 
+spec.accel.notes_plat_sysinfo_125:  From /proc/meminfo
+spec.accel.notes_plat_sysinfo_130:     MemTotal:       527826000 kB
+spec.accel.notes_plat_sysinfo_135:     HugePages_Total:       0
+spec.accel.notes_plat_sysinfo_140:     Hugepagesize:       2048 kB
+spec.accel.notes_plat_sysinfo_145: 
+spec.accel.notes_plat_sysinfo_150:  /usr/bin/lsb_release -d
+spec.accel.notes_plat_sysinfo_155:     CentOS Linux release 7.9.2009 (Core)
+spec.accel.notes_plat_sysinfo_160: 
+spec.accel.notes_plat_sysinfo_165:  From /etc/*release* /etc/*version*
+spec.accel.notes_plat_sysinfo_170:     centos-release: CentOS Linux release 7.9.2009 (Core)
+spec.accel.notes_plat_sysinfo_175:     centos-release-upstream: Derived from Red Hat Enterprise Linux 7.9 (Source)
+spec.accel.notes_plat_sysinfo_180:     os-release:
+spec.accel.notes_plat_sysinfo_185:        NAME="CentOS Linux"
+spec.accel.notes_plat_sysinfo_190:        VERSION="7 (Core)"
+spec.accel.notes_plat_sysinfo_195:        ID="centos"
+spec.accel.notes_plat_sysinfo_200:        ID_LIKE="rhel fedora"
+spec.accel.notes_plat_sysinfo_205:        VERSION_ID="7"
+spec.accel.notes_plat_sysinfo_210:        PRETTY_NAME="CentOS Linux 7 (Core)"
+spec.accel.notes_plat_sysinfo_215:        ANSI_COLOR="0;31"
+spec.accel.notes_plat_sysinfo_220:        CPE_NAME="cpe:/o:centos:centos:7"
+spec.accel.notes_plat_sysinfo_225:     redhat-release: CentOS Linux release 7.9.2009 (Core)
+spec.accel.notes_plat_sysinfo_230:     system-release: CentOS Linux release 7.9.2009 (Core)
+spec.accel.notes_plat_sysinfo_235:     system-release-cpe: cpe:/o:centos:centos:7
+spec.accel.notes_plat_sysinfo_240: 
+spec.accel.notes_plat_sysinfo_245:  uname -a:
+spec.accel.notes_plat_sysinfo_250:     Linux ga100.novalocal 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32
+spec.accel.notes_plat_sysinfo_255:     UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+spec.accel.notes_plat_sysinfo_260: 
+spec.accel.notes_plat_sysinfo_265:  run-level 3 Aug 15 06:23
+spec.accel.notes_plat_sysinfo_270: 
+spec.accel.notes_plat_sysinfo_275:  SPEC is set to: /usr/accel
+spec.accel.notes_plat_sysinfo_280:     Filesystem     Type  Size  Used Avail Use% Mounted on
+spec.accel.notes_plat_sysinfo_285:     /dev/nvme0n1p3 ext4  1.7T   22G  1.6T   2% /
+spec.accel.notes_plat_sysinfo_290:  Additional information from dmidecode:
+spec.accel.notes_plat_sysinfo_295: 
+spec.accel.notes_plat_sysinfo_300:     Warning: Use caution when you interpret this section. The 'dmidecode' program
+spec.accel.notes_plat_sysinfo_305:     reads system data which is "intended to allow hardware to be accurately
+spec.accel.notes_plat_sysinfo_310:     determined", but the intent may not be met, as there are frequent changes to
+spec.accel.notes_plat_sysinfo_315:     hardware, firmware, and the "DMTF SMBIOS" standard.
+spec.accel.notes_plat_sysinfo_320: 
+spec.accel.notes_plat_sysinfo_325:    BIOS Dell Inc. 2.6.6 01/13/2022
+spec.accel.notes_plat_sysinfo_330:    Memory:
+spec.accel.notes_plat_sysinfo_335:     8x 80AD80B380AD HMA84GR7DJR4N-XN 32 GB 2 rank 3200 MT/s
+spec.accel.notes_plat_sysinfo_340:     8x 80CE869D80CE M393A4K40EB3-CWE 32 GB 2 rank 3200 MT/s
+spec.accel.notes_plat_sysinfo_345: 
+spec.accel.notes_plat_sysinfo_350:  (End of data from sysinfo program)
+# =============== do not edit below this point ===================
+spec.accel.rawhash: a9b3eab4a56590d9fde3f1ab8b999897aaceec183f97037281a67b1ec2b73125
+spec.accel.exthash000: @eNqNVU1v40YM/Ss5FPBlY8z3B4oUaINcuott0V4WKAqDw+EkwsqSIcmJ06L/vRzF9nZXaJybxOEb
+spec.accel.exthash001: Pj5yyO/oMD3A+HB1c/X36vp6dXXzw9Ufqy0cNjuCz5vpYSDI4+rdanzawH7qNzsYoG2pZdO26b71
+spec.accel.exthash002: qr/U0XD/vCXo2JBgpK8M9eov/vX4m9/Z7893K3HkMtC4b6dxLZXdtPu8rj5rIcT8UeMxboCJavT+
+spec.accel.exthash003: iYb6+3+Qo99/kDXaBrrnJ3h+DdhMxNimrxmM+7Rtpte8L3sMOKeorC0hZU9AGRIF5YsI2oQkQiIn
+spec.accel.exthash004: 0BkbRXRBE4QSTQzBZFAes3U5y3BUCPvtrt9NoxDyq0g1hDz6TJDamnrTPULb5FfZU0s4UZ7ha328
+spec.accel.exthash005: YNyzBo8sb7XKeKk4AxUaqMMXEsqu+fRiQdn/YQvD5xnjnHBe6uBPGTTb+TIlLsfe9QMnsBkJXxBr
+spec.accel.exthash006: 5a2Tl3DY756/RJkx3r452Bk5w/jozcjuxDNkJ8gl54unIEsOFFMALxVZ5c1FKnSg+pTrVVrEU+Ha
+spec.accel.exthash007: /r7bb2eje3vZNi9vaUYRokWmQNqmLKyMMhY0HoSL5KVU3pkCQRljvXe6uIg2SOuNziUlt2hSsWhS
+spec.accel.exthash008: uw4uSqEusqtPsALcJc+8m92Ye2QVKZOROvLzkoKUYpU1Fq9JpZiYs/GZ35gI0inUgRNj/aULSS2o
+spec.accel.exthash009: 6wV1B04VgZpYEYXkZBQ+aOtKiElaUCpEoVPwhao5ZYWuOJEsZIdRW7kIYZYhWOSoFYLSvigfrDXO
+spec.accel.exthash010: muJqOJuzDRYCBnDoZdGQs+bYiE7EwE0QzLnm8IR9V5r7eifnx9Uir5yUCZTlcnnAaCW3YHJOG4wp
+spec.accel.exthash011: Z5+5hhm5vlCC11Fza6PkCpsT7dLkQ70vFJv5kuxKitmSR2bCs0oaThSCUJo7BZOw3M0FUkrekqNi
+spec.accel.exthash012: tGTaopSl0nYhQ4TAObEQKkjBfRWcVCk7E0K2aARiZq2ztzGpMFfTguVcrNA6ZJbpGIKGoR/GeuGP
+spec.accel.exthash013: t7d3Hza/3H44LT2ahmZ+iD+9/6jHu/fDz/c3NwtmbsHsYz9d/bbvjp51sZx22O+X+vRlGFfPX+9u
+spec.accel.exthash014: AZHaTY/tEbXvmmlm+uloOHvPkY9jcd9R24xTNVeS4/N4yvTw6gqqx4zJVIAdzosfH14DzeeMIoOk
+spec.accel.exthash015: pRWss8WCXHWryQTiNjARuVSpTouSCVBzQSR3LC8vJJlJJAN+oapaqEpZpiQMOhWDRM0dmKTO/KQT
+spec.accel.exthash016: t6oDnpAxJ8pFh1AIwCowBlNBlXhepgInffq+5bU169g23f5wPe5HkuIatvncx9VppFmPfsfj71SB
+spec.accel.exthash017: Dl5mOo/F0xps/potj8zq/LL23bgjnJfjP9//C/9/yok=
+spec.accel.base_threads: --
+spec.accel.baseenergymean: --
+spec.accel.basemean: --
+spec.accel.basepeak: 0
+spec.accel.cfidx000: &8AAACMdCWmgxMUFZJlNZVPIb8wACURuAAAR/8AAAv2/fsEACk1dY2QBjJiaYTTEwE0wFVP9MpH79
+spec.accel.cfidx001: VIoAAAA1T/1SaKm1AAAPUAIlIPVNpogUDQaPKWtyquWjRd87WAAAAAAAAAAVmuW0ztMjmL5On94C
+spec.accel.cfidx002: tazrEq5UqpUq8SkJjGLXCERiqmuOOOOOAAAADbGchyG9c/W1q9LhCEMwkzm8ry2hJSm0QLS0SQLS
+spec.accel.cfidx003: 0SQNC5e989um17bXiSBrrnrLy2hJSm0JKUkUqRSZzjK4Qhisb77777Ly3nWK2naKxEYiMRHRVTWt
+spec.accel.cfidx004: a1q7u5mZjGJnMxd3d3e+c2rE4qKiYiMTE1vrWtaAAAAZAYiOcajGJiY6Ji5i7u7okqJaWgVaVVVV
+spec.accel.cfidx005: aS0qJaWgSs6qqokqbSlJOMcgAAAAAAAAAAB4+uddnbm7r4bz33r7/uM/lUDH69hIlSS8DNUDr6Mo
+spec.accel.cfidx006: qBPjTn11VA1/uvrWwU/PGXM07Xv368Txdp9+s9thEOcYVA1+n+Qv08c8qgb++uR451VA8m/n7Gvd
+spec.accel.cfidx007: KcyxbVUDVUC2eeFQOcu1X5xxTs91QN7ZRUDTG2V3XeTjGMht20VAx0+FQPO+eekmFsqBXGFQJJuq
+spec.accel.cfidx008: BocTAabdK8BIkSYfeSoGXH/F3JFOFCQVPIb8wA==
+spec.accel.errors000: 'reportable' flag not set during run
+spec.accel.errors001: 123.nw (base) did not have enough runs!
+spec.accel.errors002: 103.stencil (base) did not have enough runs!
+spec.accel.errors003: 104.lbm (base) did not have enough runs!
+spec.accel.errors004: 121.lavamd (base) did not have enough runs!
+spec.accel.errors005: 101.tpacf (base) did not have enough runs!
+spec.accel.errors006: 114.mriq (base) did not have enough runs!
+spec.accel.errors007: 110.fft (base) did not have enough runs!
+spec.accel.errors008: 124.hotspot (base) did not have enough runs!
+spec.accel.errors009: 125.lud (base) did not have enough runs!
+spec.accel.errors010: 128.heartwall (base) did not have enough runs!
+spec.accel.errors011: 127.srad (base) did not have enough runs!
+spec.accel.errors012: 140.bplustree (base) did not have enough runs!
+spec.accel.errors013: 112.spmv (base) did not have enough runs!
+spec.accel.errors014: 126.ge (base) did not have enough runs!
+spec.accel.errors015: 120.kmeans (base) did not have enough runs!
+spec.accel.errors016: 116.histo (base) did not have enough runs!
+spec.accel.errors017: 118.cutcp (base) did not have enough runs!
+spec.accel.errors018: 117.bfs (base) did not have enough runs!
+spec.accel.errors019: 122.cfd (base) did not have enough runs!
+spec.accel.ext: compsys
+spec.accel.invalid: 1
+spec.accel.lognum: 3093
+spec.accel.mach: default
+spec.accel.max_peak_threads: --
+spec.accel.max_threads: --
+spec.accel.mean_anyway: 0
+spec.accel.metric: ACCEL_OCL
+spec.accel.min_peak_threads: --
+spec.accel.name: opencl
+spec.accel.peakenergymean: --
+spec.accel.peakmean: Not Run
+spec.accel.power: 0
+spec.accel.rate: 0
+spec.accel.rawconfig000: @eNq9Wnlz29YR/x+fYks5YzsRDwC8xJSdoSjKZmIdI9GO3E6HAwKPJCpcxUFK+fTd3fdwSALdpFFD
+spec.accel.rawconfig001: e0Y83h5vj9/uvocjmAe70LZSNwzADn3fChzw3ECMtCNoZ0nctmxbeO2VG7TjLEgiYUOzaYfB2t2M
+spec.accel.rawconfig002: w0gEttcMdq7jWk1L73Ra9nqDv0eela7D2IfLL/Oz+QS/cVMRs5BkrONHR+xcW8CH68/4IXF/FeNY
+spec.accel.rawconfig003: rPFtEMYiCuPUWnkCP6ZZIMYrK6H3YZZGWboktlYKdrIDL3OgOUc91U9xGKawtxII8G+WCAdwMaRb
+spec.accel.rawconfig004: NwFUXTt6xZeG/6B8nYV25osghYWbemIEMHuw/MgTzacWSlz6kmz0jF69brPVv4SdIv3t9WwKk+l0
+spec.accel.rawconfig005: 9glumSjnCFM2PaxdT7xk8slKUvgcOVZKShhD+MkKwOjoXV7a/CMv5rAgW+J/5CqUPuEaLNiJ+BHk
+spec.accel.rawconfig006: 7pTWdqlmCwnnKZG5QSoCB/2ShrgAidA5AtbCSrNYJJBk67Vru2THNESijUiRt+RHQUBhSZ6kOEVJ
+spec.accel.rawconfig007: qXBacO0JCo9ECOKFRFJwK31IWTiHgCNSy/US4BAv9EKiNItwLw6SYbjQOwiRS1xsTq7OZOQyUcIM
+spec.accel.rawconfig008: 11nM6xJehuS8dYoAGeMtttb84vrqZjG5XIzqDPeSN7N2PS9LUvkt8oiyOAoTITni5ymmKIpJyIRk
+spec.accel.rawconfig009: vOp+rJhYZLgLN+AcxlVbzJWV2LjEa++mWyZqHDXA3lqxZWNWtpRnkdaNMXySVETEwI7RL26wQRfU
+spec.accel.rawconfig010: qOqyBo6Ke2TwGGbx04UtYK75flfCC/e0An0RPAshpE9Cn4OJI8IVnqOUp00FQjgqm3OJpBiJREof
+spec.accel.rawconfig011: IwDjh83SgltRiGz6wnEznzGJaCsiiTW5DZMzc9BOFtoL907B7HnP1IjFvzM3VvIt9L3nsWNWnqtw
+spec.accel.rawconfig012: E9dj/GYeyte0V8IXuH1ET/jwGRMmhoVA7d7dfl68xw3aKjbma3DRQOs1fpNAJGLGxsAWx2Qatho7
+spec.accel.rawconfig013: SSR27K7QZ+kxCJcCl7fOe4xigWC8xmBx8v3iLlePYDkO2dhN80hDUKUcldIpp28EwrzNeUepxC6R
+spec.accel.rawconfig014: Ti4CLSxiEDHb3hYes+wtSpSRt90v/dARHowhsMoYUGuAf1PLhB8izoxhizL8DPmpb9RechLaPIUN
+spec.accel.rawconfig015: 6ktKSWLHTe6RdE/KpI8R+RwThUoPSeRf9wKJuG7styJgcuFI6h3iFtpF0atPvnXP2yslrwQZoUpo
+spec.accel.rawconfig016: R1lVKsmK4tAWSUK5nuSqJ+zsgmTpb39FMk5wL7TvYU1BiKXkMTdPweS1yppWhtwZB0zEUVZ4R73G
+spec.accel.rawconfig017: hEBYbDEm1eq7uzutcE6n05GruvDhVMvNXhLroA8/nMJpTMa/g9vp7Zxtr5U2PiRnHtghYiFiC9qW
+spec.accel.rawconfig018: kBB7B6eiqaasXZFm9jpw8fHXF6xK41XMXdIQd0o4EVcFQBMQTlK2PhXYY4SAVMIeAoEIsIAEmb9C
+spec.accel.rawconfig019: Ikww8RdNU98u8VvJW8NkizAwnSXm12/YJBoGM+xxGcYEAWw+i3S7iriXwkiTYXOsypmMIS3ZL8NE
+spec.accel.rawconfig020: OaJeyufAfYAvIk5oW1+/fiUSZlGSnIm1hYCmaa8WX0cwo/q6BkSxHEYkiHGHVi1knIgIO4hZVhR5
+spec.accel.rawconfig021: rsSxRGDHYHlEnxyzLxLYh5lHmbYqikQYeI8wOb36MpN8oxC7jpb2WkmivZo1qDZuhUWuVdbIc7va
+spec.accel.rawconfig022: OwFcYDtAZhBWzBtFkKdWhVAvSQntE6JrONJh4waDqsD2R+IkMcTm3YpdXEjIuBGB4PhCmMZaR3XB
+spec.accel.rawconfig023: oYKK6E+WpJYbSanRd9eP0KDGq0E1oYEa3Mt3WCMbtBRZx1SYCGyVfNhZXiYSTSMNqrlIPRtGqPa0
+spec.accel.rawconfig024: jR+Dldjakez3y8UdLRUCV5bfBCF9hc1f/u0YHlEMa1shJG1f0UeUOOgF8pAnfXRMvS7lDYYgYRgh
+spec.accel.rawconfig025: gWr3MIlstf6vDw9/o71hDSUiDFo3kDsmN6uCzKWC3S2JSN4UKm6blvK5UuzCe3bR+ZNV59hj3kwu
+spec.accel.rawconfig026: CzbVtZqWh8WBvyOtonUdVBQaTHm75zibIXafdDRStWL4jW1r07u7J1/98IN2/mzVWtIjSKWxa+PI
+spec.accel.rawconfig027: ht2qGyP0xxRs5HjtNSc07lmGDw8cocVESK1ebnw5bLqemz7C2rM2L7pOivOQR5Fqh4oVZBNbfiIn
+spec.accel.rawconfig028: GTZRC37ZEnjx6LbFKdTH3Aaxpi0nkguWgyyWzWfJwQl5XlVdJnHHSiI7FBTGOh2zbBp0n0knNS1n
+spec.accel.rawconfig029: RyjgIPcw22zZTVyjXGwMY8EAsRLpXgiC2/BZ7UhgQ31+Tsyq8UYLGU8Uk5GOUVBjODLtCuVtfSu+
+spec.accel.rawconfig030: l0M4WVo4x+BkETfLslmUmSCHLke2jC2YYQtVkvOslCTuhvpSAvpwHyDuoKoN3qD6irJOdZ4kfXaH
+spec.accel.rawconfig031: mbCcnn+afLhlRatfYHRNynxUvg558CNa6UVO0B/J/Kiu5z2+nNKLKHphgELep/npLYd7RZ7nrmKJ
+spec.accel.rawconfig032: wQWD3y3RTZJMRkVFdiH1/E/a5etm6NX1Yn4x//sM9ZbKcsG3uR6g3jSN5fBEBp7+l/USNiuIev4b
+spec.accel.rawconfig033: CBSoVcioFxYin2kVAuJolZFNyRMVNA9lB6+Y7yw074rPBGjhEw7IVyvUySGxeWVoKmBKnGx+4qM3
+spec.accel.rawconfig034: bP0tr21njtXG+Ol3oelh7xdMP2lPAo1aSxXpd3d5FDTnz1moYVd7khTwzaWv3/xhYMXNJFNdXcWO
+spec.accel.rawconfig035: rdcbZLT8PCP0EFoY6yRIJLKzDFd0BEHQ80jHSQGteEsND2KjB2/+kYbRP9tnoZ20ESNJxbdaUS65
+spec.accel.rawconfig036: oizpfHOpflxSqz2mekmfctysnp1WWdUz6CGDNzdiN4L+Sb8Hb+DNGR3hjejsrtfsdJuGDkdvwO70
+spec.accel.rawconfig037: rMFa7670lT7o94S5Frqz7g+73YEYWmavlrlO2uXbxGDd8DltEGKjRg6HRSZgkm1A74M+GJn9kTFE
+spec.accel.rawconfig038: sYZRzww1rf3BICl8ypU3s8VJD/X7716cZrxn5yPI09ldgK6oZ0uW4XpEZ9PINUsJixBH6XQpxOLk
+spec.accel.rawconfig039: hztBTSn2WjKfSxWOiXW9y0xSF2CbptGo3d7v9y3yfyuMN1WfqbPEbep7R9/yn3nIKl0Scx6HGA40
+spec.accel.rawconfig040: c7Zx1jzIpNtjleSBhzwKGcHk4gxm11+nMBj0Teh3m1Pq/q+L+bWOUU/ujV4Gdu1b/J787DqNBN7Z
+spec.accel.rawconfig041: WzdK3tfT9Uq6Xh8pcylJo3Z9X8nBiVVQi+KuPM6xd1MrI/OP8JcsyDuthM8Mt3t57CKjwRERnQfj
+spec.accel.rawconfig042: fMZHhfVSlFZlMosHW8QRNgDrF4YF391sU249VjSbeC5hMXL/jOLpVKpWxCDfiNS7VW+eQWkeOmbg
+spec.accel.rawconfig043: XaOH+t3a1cPSCYVhcLVuDOuXl8wLh3VGSkgHdPSkCV3oQR8GMIQTwKzWdWQHugl6FzAvOX9BH4J+
+spec.accel.rawconfig044: gvkLhl4r6KQSHAYYJhhd9DYYfTAGdGFgnADmhqmDiRJNMLuAwW32wRyAOQTzBDCkuzp0DeiiQl3A
+spec.accel.rawconfig045: qO326yWVW+oOoDuE7glgaPZ06BnQM6GH2+kBBlpvAL0h9E4AA6qvQ9+AvlnHUe90XhpJ/z8YSe/0
+spec.accel.rawconfig046: /iQj6XrntY2k9/Jgtulckc43R8jPgJ9Pa9cTcNf/0HuKXb7wD2GXruAULoS/CFPLG6k99YzB0OhT
+spec.accel.rawconfig047: gbyvl24qbT9mG3FtbfD3J/SdWqJupySKiAg3mVMYHTTiAWHdAzCtM2JywaZrTi9ZLRE6+F6p6dQT
+spec.accel.rawconfig048: KLWniF1Xt/DJDbIHyGkGrZOW0emcIBBiZNaCid4/ZPV+aXWR2u3vFdPv1Ud1+PB9LW2BY6hVmDQV
+spec.accel.rawconfig049: 6eh/1zKHvKcMm1mE07uw/BGc4dy+o0mBFL7BNx9xfJwFKeJz7KIQKRJFYQOAnbB9QE4OlhWl69eV
+spec.accel.rawconfig050: eXk5uZiNG9Wd1RYpvYJ3X2Y3t/Ory3FjoPZ8gKIUMj8bN+Tea5caFUCan2E3/jOqFG+xeq+FE8bW
+spec.accel.rawconfig051: AaLec42WJGdQv7oCENc3s8Xi6/LlzuGbGzL0UuDk8na+nF59uroZNzo/mno9gVHKnF7PlEBsjkft
+spec.accel.rawconfig052: cCTNkf85oLShJMbC2VrpHw9EI8cX2Te8BsNeHcMmbRLqd1rLpnsgjQ1u5jJu4ppWbTAbeZsmlX/e
+spec.accel.rawconfig053: lZstvdPqNHVEilb3pKW3hDdoPQz7S5wCj3S4vbjmxv0y3FEp0nujnj4yjXpBaq+fF1Nq7HVQbJ7+
+spec.accel.rawconfig054: +XD5uc2q1PI4hFcG4xVOF01P7DDwTTlK9KCDc0RtgTIGh1gx2vDpGbfwdPE4qoxRtTQ5cpzT1bxs
+spec.accel.rawconfig055: Kum1oKs2uKXiR62fAxOay+ntd3BBTSlfFNRzVNZqO2LXDna+6AR6ZNKBehdAbw0W3BR8oPd9fv8d
+spec.accel.rawconfig056: tGsZMfJM6k+AGS8d33WEjd1+fXycHKhWZo46v1gxzXQjbm5V7ypvLumY35UoTGasjEQtHozfFqLf
+spec.accel.rawconfig057: 5vNqvaQijy0nKZp2K7VQjGtvyU+N6jMdFrXosLViZ2+VNzi2TQ8ECK92wjNzgHME6uvTWN44hlUm
+spec.accel.rawconfig058: 79mYOV0eP+Y9vS/SYxoa6RZbPfEgr0ZTeqIh2NCFbFgvSG0mV49uzWJfvsvPTBtnF4tzTK7T+dVt
+spec.accel.rawconfig059: A+h6xcHVrVp+hxonU6Ef8cAC6Xl0qdcCo9Vv9aGjt3WzfWi8NhXOXfBd6qh+idrG8AGGncnZsHNq
+spec.accel.rawconfig060: 0l/4eDEZdj/cDM5+uuleNu8uqTf9cIotcWwF9/gBo+Zi0U5qeeYNFfOczob9kzP6CxfmiTnp/tzt
+spec.accel.rawconfig061: zE7N5vSX2e/ieSh8GffeqeMgDibOhuTp+cn7/GqWMVSeptbNws/vmMeUo7A4BT4Q8Gla5p+ZN8VM
+spec.accel.rawconfig062: 9a5aZ4Jex2yZA7qwxoh48LECzOmcikbNs7Mb81idV2O0j6rEBhO/vSS6dxfwAPwuuHkI4HoaNAN6
+spec.accel.rawconfig063: 3TSDY5hNp+/fEmXAw3eup/H8OhhxlB5gg3eYVgHddarn2o7lnWZK54uxtadrwffPb2zHDFD51a9e
+spec.accel.rawconfig064: 3vz+lgKpqIzy3vxw8aHFmBepKBbfZAHk4P+OjM6PkzDqscHf157HyTMielgPSRA9EL5CAkc+j5YJ
+spec.accel.rawconfig065: WRwgFad36qkdx3UYDuSlaP4IRRi7G5eA9uXTShJQ+OxPSpMHv8gK7amenVqn6nE0LGYtrXo9Rvee
+spec.accel.rawconfig066: yyiNeZYaY8lNYVKcIWv0sMcyicIg4edDvnmhn8qHCr696j+hs8jZ
+spec.accel.runspecver: v2989
+spec.accel.size: ref
+spec.accel.submit: 0
+spec.accel.suitever: 1.3
+spec.accel.sw_auto_parallel: --
+spec.accel.table: 1
+spec.accel.time: 1660671387
+spec.accel.toolset: linux-suse10-amd64
+spec.accel.toolvers000: @eNpdkMEOwiAQRH+INLRJFbyaeO7Fc4MEKhFYAlR/X5AGaW/7htlldq/T/abZEibmg/CdM5eBnAh6
+spec.accel.toolvers001: CMufhvlXVkaMNyWIWCz0XIWZgzFgO6eLntAxLxq2Ui0/pIRu2DZR3COZMqxR6VDaUoKqHOdL8IbF
+spec.accel.toolvers002: mrTg7NmnOrQKUSotqkcDZ1HU0RqWtj5+kGoVwVeGfyjYpcnruHy3QkOP/GqDE7w8pdusbjOOKO+y
+spec.accel.toolvers003: g92k1PtOkxrthMn4Be0QiSM=
+spec.accel.tunelist000: base
+spec.accel.units: SPECaccel_ocl
+spec.accel.valid: X
+spec.accel.results.125_lud.base.000.basepeak: 0
+spec.accel.results.125_lud.base.000.benchmark: 125.lud
+spec.accel.results.125_lud.base.000.copytime000: 20.27561
+spec.accel.results.125_lud.base.000.dp: 6
+spec.accel.results.125_lud.base.000.exehash: 28d60e6b67f7e81fd8e9b8a712e52745
+spec.accel.results.125_lud.base.000.ext: compsys
+spec.accel.results.125_lud.base.000.iteration: 0
+spec.accel.results.125_lud.base.000.mach: default
+spec.accel.results.125_lud.base.000.rate: 0
+spec.accel.results.125_lud.base.000.ratio: 5.869102
+spec.accel.results.125_lud.base.000.rc: 0
+spec.accel.results.125_lud.base.000.reference: 119
+spec.accel.results.125_lud.base.000.reference_power: 369
+spec.accel.results.125_lud.base.000.reported_nsec: 275675000
+spec.accel.results.125_lud.base.000.reported_sec: 20
+spec.accel.results.125_lud.base.000.reported_time: 20.275675
+spec.accel.results.125_lud.base.000.selected: 1
+spec.accel.results.125_lud.base.000.submit: 0
+spec.accel.results.125_lud.base.000.valid: S
+spec.accel.compopts000.125_lud.base: @eNqFUVtvgjAYfe+v+NJXLRejcyPDBAozbAhEZCF7IYh1YUNquJjs368izm3ZpS/tdznnO+erx0uy
+spec.accel.compopts001.125_lud.base: S1/ZNi8Y8H2T87LWUN1UedYkVVtu8io5sCrfvulYwUg8a9Gi4+kUI+ovAg2eBwMgGRB+hksciBUG
+spec.accel.compopts002.125_lud.base: Nu2vxKDUdkXgWbYZzQGA+CPoDnHktq7kgmdpIWftJpXzMivaDeuqtzVvq4zNENWAxrGOxSjcB755
+spec.accel.compopts003.125_lud.base: 7wcrHX+ZjJHQQ4PozjXmoaj9oQIjXwPB4CycJ1u0+qMuY8erpZEI/jPFbwIxch3v4eT+4uckm69f
+spec.accel.compopts004.125_lud.base: WNbUMyDud3SRr6/GQAp/z0rqXjAXD0d/rtV7/VGj65hHZf9w4xORHx2X9GlDy8jTAIWCuGsjQZE2
+spec.accel.compopts005.125_lud.base: W17tdOw9OpZjAI0sY9hXQZVGXQJUVVIk9Ub8uvUBtdghzxhRdGyoikLCeDEm18rcHMIBxhNFmgjM
+spec.accel.compopts006.125_lud.base: BKN3sEKrJg==

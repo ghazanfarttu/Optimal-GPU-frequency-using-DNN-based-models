@@ -1,0 +1,75 @@
+runspec vv2989 started at Mon Aug 15 22:55:39 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv tpacf -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 101.tpacf
+outputs   = csv
+username  = root
+Benchmarks selected: 101.tpacf
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 101.tpacf base compsys default
+
+
+Setting Up Run Directories
+  Setting up 101.tpacf ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 101.tpacf ref base compsys default [Mon Aug 15 22:55:40 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/101.tpacf/run/run_base_ref_compsys.0000
+    -o tpact.out -e tpacf.err ../run_base_ref_compsys.0000/tpacf_exe_base.compsys --platform NVIDIA --device GPU -i datafiles/Datapnts.1,datafiles/Randompnts.1,datafiles/Randompnts.2,datafiles/Randompnts.3,datafiles/Randompnts.4,datafiles/Randompnts.5,datafiles/Randompnts.6,datafiles/Randompnts.7,datafiles/Randompnts.8,datafiles/Randompnts.9,datafiles/Randompnts.10,datafiles/Randompnts.11,datafiles/Randompnts.12,datafiles/Randompnts.13,datafiles/Randompnts.14,datafiles/Randompnts.15,datafiles/Randompnts.16,datafiles/Randompnts.17,datafiles/Randompnts.18,datafiles/Randompnts.19,datafiles/Randompnts.20,datafiles/Randompnts.21,datafiles/Randompnts.22,datafiles/Randompnts.23,datafiles/Randompnts.24,datafiles/Randompnts.25,datafiles/Randompnts.26,datafiles/Randompnts.27,datafiles/Randompnts.28,datafiles/Randompnts.29,datafiles/Randompnts.30,datafiles/Randompnts.31,datafiles/Randompnts.32,datafiles/Randompnts.33,datafiles/Randompnts.34,datafiles/Randompnts.35,datafiles/Randompnts.36,datafiles/Randompnts.37,datafiles/Randompnts.38,datafiles/Randompnts.39,datafiles/Randompnts.40,datafiles/Randompnts.41,datafiles/Randompnts.42,datafiles/Randompnts.43,datafiles/Randompnts.44,datafiles/Randompnts.45,datafiles/Randompnts.46,datafiles/Randompnts.47,datafiles/Randompnts.48,datafiles/Randompnts.49,datafiles/Randompnts.50,datafiles/Randompnts.51,datafiles/Randompnts.52,datafiles/Randompnts.53,datafiles/Randompnts.54,datafiles/Randompnts.55,datafiles/Randompnts.56,datafiles/Randompnts.57,datafiles/Randompnts.58,datafiles/Randompnts.59,datafiles/Randompnts.60,datafiles/Randompnts.61,datafiles/Randompnts.62,datafiles/Randompnts.63,datafiles/Randompnts.64,datafiles/Randompnts.65,datafiles/Randompnts.66,datafiles/Randompnts.67,datafiles/Randompnts.68,datafiles/Randompnts.69,datafiles/Randompnts.70,datafiles/Randompnts.71,datafiles/Randompnts.72,datafiles/Randompnts.73,datafiles/Randompnts.74,datafiles/Randompnts.75,datafiles/Randompnts.76,datafiles/Randompnts.77,datafiles/Randompnts.78,datafiles/Randompnts.79,datafiles/Randompnts.80,datafiles/Randompnts.81,datafiles/Randompnts.82,datafiles/Randompnts.83,datafiles/Randompnts.84,datafiles/Randompnts.85,datafiles/Randompnts.86,datafiles/Randompnts.87,datafiles/Randompnts.88,datafiles/Randompnts.89,datafiles/Randompnts.90,datafiles/Randompnts.91,datafiles/Randompnts.92,datafiles/Randompnts.93,datafiles/Randompnts.94,datafiles/Randompnts.95,datafiles/Randompnts.96,datafiles/Randompnts.97,datafiles/Randompnts.98,datafiles/Randompnts.99,datafiles/Randompnts.100 -o tpacf.out -- -n 100 -p 48589 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/101.tpacf/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/101.tpacf/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Mon Aug 15 22:55:40 2022 (1660604140.76852)
+Stop command: Mon Aug 15 22:55:49 2022 (1660604149.52711)
+Elapsed time for command: 00:00:08 (8.75858902931213)
+Workload elapsed time (0:1) = 8.755558 seconds
+Copy 0 of 101.tpacf (base ref) run 1 finished at Mon Aug 15 22:55:49 2022.  Total elapsed time: 8.755558
+comparing files in '/usr/accel/benchspec/ACCEL/101.tpacf/run/run_base_ref_compsys.0000'
+comparing 'tpacf.out' with abstol=15, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.03, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/101.tpacf/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/101.tpacf/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Mon Aug 15 22:55:49 2022 (1660604149.53864)
+Stop command: Mon Aug 15 22:55:49 2022 (1660604149.62714)
+Elapsed time for command: 00:00:00 (0.0884940624237061)
+Benchmark Times:
+  Start:    Mon Aug 15 22:55:40 2022 (1660604140)
+  Stop:     Mon Aug 15 22:55:49 2022 (1660604149)
+  Elapsed:  00:00:09 (9)
+  Reported: 8 755629000 8.755629
+ Success 101.tpacf base ref ratio=12.22, runtime=8.755629, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x101.tpacf
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.1483.opencl.ref.rsf
+Parsing flags for 101.tpacf base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.1483.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.1483.log
+
+runspec finished at Mon Aug 15 22:55:50 2022; 11 total seconds elapsed

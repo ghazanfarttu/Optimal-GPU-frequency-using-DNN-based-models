@@ -1,0 +1,75 @@
+runspec vv2989 started at Mon Aug 15 15:18:17 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv lavamd -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 121.lavamd
+outputs   = csv
+username  = root
+Benchmarks selected: 121.lavamd
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 121.lavamd base compsys default
+
+
+Setting Up Run Directories
+  Setting up 121.lavamd ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 121.lavamd ref base compsys default [Mon Aug 15 15:18:18 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/121.lavamd/run/run_base_ref_compsys.0000
+    -o lavamd.out -e lavamd.err ../run_base_ref_compsys.0000/lavamd_exe_base.compsys --platform NVIDIA --device GPU boxes1d 78 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/121.lavamd/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/121.lavamd/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Mon Aug 15 15:18:18 2022 (1660576698.3826)
+Stop command: Mon Aug 15 15:18:23 2022 (1660576703.36935)
+Elapsed time for command: 00:00:04 (4.98674988746643)
+Workload elapsed time (0:1) = 4.98367 seconds
+Copy 0 of 121.lavamd (base ref) run 1 finished at Mon Aug 15 15:18:23 2022.  Total elapsed time: 4.98367
+comparing files in '/usr/accel/benchspec/ACCEL/121.lavamd/run/run_base_ref_compsys.0000'
+comparing 'result.txt' with abstol=2.5e-05, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0025, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/121.lavamd/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/121.lavamd/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Mon Aug 15 15:18:23 2022 (1660576703.38089)
+Stop command: Mon Aug 15 15:18:27 2022 (1660576707.21919)
+Elapsed time for command: 00:00:03 (3.83830094337463)
+Benchmark Times:
+  Start:    Mon Aug 15 15:18:18 2022 (1660576698)
+  Stop:     Mon Aug 15 15:18:23 2022 (1660576703)
+  Elapsed:  00:00:05 (5)
+  Reported: 4 983730000 4.98373
+ Success 121.lavamd base ref ratio=21.87, runtime=4.983730, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x121.lavamd
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.790.opencl.ref.rsf
+Parsing flags for 121.lavamd base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.790.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.790.log
+
+runspec finished at Mon Aug 15 15:18:27 2022; 10 total seconds elapsed

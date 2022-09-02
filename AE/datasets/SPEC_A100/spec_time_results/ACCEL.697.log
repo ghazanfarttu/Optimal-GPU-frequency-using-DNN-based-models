@@ -1,0 +1,75 @@
+runspec vv2989 started at Mon Aug 15 14:17:15 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv nw -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 123.nw
+outputs   = csv
+username  = root
+Benchmarks selected: 123.nw
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 123.nw base compsys default
+
+
+Setting Up Run Directories
+  Setting up 123.nw ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 123.nw ref base compsys default [Mon Aug 15 14:17:16 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/123.nw/run/run_base_ref_compsys.0000
+    -o nw.out -e nw.err ../run_base_ref_compsys.0000/nw_exe_base.compsys --platform NVIDIA --device GPU 8192 10 nw.cl 1600 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/123.nw/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/123.nw/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Mon Aug 15 14:17:16 2022 (1660573036.97462)
+Stop command: Mon Aug 15 14:17:33 2022 (1660573053.12897)
+Elapsed time for command: 00:00:16 (16.1543538570404)
+Workload elapsed time (0:1) = 16.151356 seconds
+Copy 0 of 123.nw (base ref) run 1 finished at Mon Aug 15 14:17:33 2022.  Total elapsed time: 16.151356
+comparing files in '/usr/accel/benchspec/ACCEL/123.nw/run/run_base_ref_compsys.0000'
+comparing 'result.txt' with abstol=, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/123.nw/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/123.nw/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Mon Aug 15 14:17:33 2022 (1660573053.14051)
+Stop command: Mon Aug 15 14:17:33 2022 (1660573053.22809)
+Elapsed time for command: 00:00:00 (0.0875818729400635)
+Benchmark Times:
+  Start:    Mon Aug 15 14:17:16 2022 (1660573036)
+  Stop:     Mon Aug 15 14:17:33 2022 (1660573053)
+  Elapsed:  00:00:17 (17)
+  Reported: 16 151428000 16.151428
+ Success 123.nw base ref ratio=7.12, runtime=16.151428, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x123.nw
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.697.opencl.ref.rsf
+Parsing flags for 123.nw base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.697.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.697.log
+
+runspec finished at Mon Aug 15 14:17:33 2022; 18 total seconds elapsed

@@ -1,0 +1,75 @@
+runspec vv2989 started at Mon Aug 15 19:49:23 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv mriq -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 114.mriq
+outputs   = csv
+username  = root
+Benchmarks selected: 114.mriq
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 114.mriq base compsys default
+
+
+Setting Up Run Directories
+  Setting up 114.mriq ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 114.mriq ref base compsys default [Mon Aug 15 19:49:25 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000
+    -o mriq.out -e mriq.err ../run_base_ref_compsys.0000/mriq_exe_base.compsys --platform NVIDIA --device GPU -i 128x128x128.bin -o 128x128x128.out -- 200000 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Mon Aug 15 19:49:25 2022 (1660592965.02983)
+Stop command: Mon Aug 15 19:49:28 2022 (1660592968.92976)
+Elapsed time for command: 00:00:03 (3.89992499351501)
+Workload elapsed time (0:1) = 3.896677 seconds
+Copy 0 of 114.mriq (base ref) run 1 finished at Mon Aug 15 19:49:28 2022.  Total elapsed time: 3.896677
+comparing files in '/usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000'
+comparing '128x128x128.out' with abstol=0.002, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.002, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/114.mriq/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Mon Aug 15 19:49:28 2022 (1660592968.94138)
+Stop command: Mon Aug 15 19:49:36 2022 (1660592976.86201)
+Elapsed time for command: 00:00:07 (7.92063093185425)
+Benchmark Times:
+  Start:    Mon Aug 15 19:49:25 2022 (1660592965)
+  Stop:     Mon Aug 15 19:49:28 2022 (1660592968)
+  Elapsed:  00:00:03 (3)
+  Reported: 3 896746000 3.896746
+ Success 114.mriq base ref ratio=27.97, runtime=3.896746, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x114.mriq
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.1203.opencl.ref.rsf
+Parsing flags for 114.mriq base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.1203.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.1203.log
+
+runspec finished at Mon Aug 15 19:49:37 2022; 14 total seconds elapsed

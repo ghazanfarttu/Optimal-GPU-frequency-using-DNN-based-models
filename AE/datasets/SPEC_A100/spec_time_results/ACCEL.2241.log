@@ -1,0 +1,75 @@
+runspec vv2989 started at Tue Aug 16 07:29:31 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv heartwall -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 128.heartwall
+outputs   = csv
+username  = root
+Benchmarks selected: 128.heartwall
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 128.heartwall base compsys default
+
+
+Setting Up Run Directories
+  Setting up 128.heartwall ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 128.heartwall ref base compsys default [Tue Aug 16 07:29:32 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/128.heartwall/run/run_base_ref_compsys.0000
+    -o heartwall.out -e heartwall.err ../run_base_ref_compsys.0000/heartwall_exe_base.compsys --platform NVIDIA --device GPU 100 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/128.heartwall/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/128.heartwall/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Tue Aug 16 07:29:32 2022 (1660634972.78219)
+Stop command: Tue Aug 16 07:29:47 2022 (1660634987.91075)
+Elapsed time for command: 00:00:15 (15.1285669803619)
+Workload elapsed time (0:1) = 15.12566 seconds
+Copy 0 of 128.heartwall (base ref) run 1 finished at Tue Aug 16 07:29:47 2022.  Total elapsed time: 15.12566
+comparing files in '/usr/accel/benchspec/ACCEL/128.heartwall/run/run_base_ref_compsys.0000'
+comparing 'result.txt' with abstol=6, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/128.heartwall/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/128.heartwall/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Tue Aug 16 07:29:47 2022 (1660634987.92221)
+Stop command: Tue Aug 16 07:29:48 2022 (1660634988.01458)
+Elapsed time for command: 00:00:00 (0.0923640727996826)
+Benchmark Times:
+  Start:    Tue Aug 16 07:29:32 2022 (1660634972)
+  Stop:     Tue Aug 16 07:29:47 2022 (1660634987)
+  Elapsed:  00:00:15 (15)
+  Reported: 15 125716000 15.125716
+ Success 128.heartwall base ref ratio=7.01, runtime=15.125716, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x128.heartwall
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.2241.opencl.ref.rsf
+Parsing flags for 128.heartwall base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.2241.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.2241.log
+
+runspec finished at Tue Aug 16 07:29:48 2022; 17 total seconds elapsed

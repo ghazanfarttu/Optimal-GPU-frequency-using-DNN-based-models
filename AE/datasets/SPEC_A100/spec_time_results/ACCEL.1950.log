@@ -1,0 +1,77 @@
+runspec vv2989 started at Tue Aug 16 04:10:23 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv cfd -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 122.cfd
+outputs   = csv
+username  = root
+Benchmarks selected: 122.cfd
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 122.cfd base compsys default
+
+
+Setting Up Run Directories
+  Setting up 122.cfd ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 122.cfd ref base compsys default [Tue Aug 16 04:10:24 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/122.cfd/run/run_base_ref_compsys.0000
+    -o euler3d.out -e euler3d.err ../run_base_ref_compsys.0000/cfd_exe_base.compsys --platform NVIDIA --device GPU fvcorr.domn.193K RK 4 IT 24000 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/122.cfd/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/122.cfd/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Tue Aug 16 04:10:24 2022 (1660623024.59736)
+Stop command: Tue Aug 16 04:10:37 2022 (1660623037.15052)
+Elapsed time for command: 00:00:12 (12.5531580448151)
+Workload elapsed time (0:1) = 12.550009 seconds
+Copy 0 of 122.cfd (base ref) run 1 finished at Tue Aug 16 04:10:37 2022.  Total elapsed time: 12.550009
+comparing files in '/usr/accel/benchspec/ACCEL/122.cfd/run/run_base_ref_compsys.0000'
+comparing 'density' with abstol=2.5e-05, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0025, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'density_energy' with abstol=2.5e-05, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0025, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+comparing 'momentum' with abstol=2.5e-05, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0025, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/122.cfd/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/122.cfd/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Tue Aug 16 04:10:37 2022 (1660623037.16229)
+Stop command: Tue Aug 16 04:10:44 2022 (1660623044.36534)
+Elapsed time for command: 00:00:07 (7.20304203033447)
+Benchmark Times:
+  Start:    Tue Aug 16 04:10:24 2022 (1660623024)
+  Stop:     Tue Aug 16 04:10:37 2022 (1660623037)
+  Elapsed:  00:00:13 (13)
+  Reported: 12 550089000 12.550089
+ Success 122.cfd base ref ratio=10.04, runtime=12.550089, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x122.cfd
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.1950.opencl.ref.rsf
+Parsing flags for 122.cfd base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.1950.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.1950.log
+
+runspec finished at Tue Aug 16 04:10:45 2022; 22 total seconds elapsed

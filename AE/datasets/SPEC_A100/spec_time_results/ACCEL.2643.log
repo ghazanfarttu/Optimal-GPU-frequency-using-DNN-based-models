@@ -1,0 +1,75 @@
+runspec vv2989 started at Tue Aug 16 12:09:56 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv stencil -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 103.stencil
+outputs   = csv
+username  = root
+Benchmarks selected: 103.stencil
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 103.stencil base compsys default
+
+
+Setting Up Run Directories
+  Setting up 103.stencil ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 103.stencil ref base compsys default [Tue Aug 16 12:09:57 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/103.stencil/run/run_base_ref_compsys.0000
+    -o stencil.out -e stencil.err ../run_base_ref_compsys.0000/stencil_exe_base.compsys --platform NVIDIA --device GPU -o 512x512x98.out -- 512 512 98 20000 (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/103.stencil/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/103.stencil/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Tue Aug 16 12:09:57 2022 (1660651797.90284)
+Stop command: Tue Aug 16 12:10:05 2022 (1660651805.14041)
+Elapsed time for command: 00:00:07 (7.23757600784302)
+Workload elapsed time (0:1) = 7.234437 seconds
+Copy 0 of 103.stencil (base ref) run 1 finished at Tue Aug 16 12:10:05 2022.  Total elapsed time: 7.234437
+comparing files in '/usr/accel/benchspec/ACCEL/103.stencil/run/run_base_ref_compsys.0000'
+comparing '512x512x98.out' with abstol=, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.0025, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/103.stencil/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/103.stencil/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Tue Aug 16 12:10:05 2022 (1660651805.15191)
+Stop command: Tue Aug 16 12:10:40 2022 (1660651840.23801)
+Elapsed time for command: 00:00:35 (35.0860941410065)
+Benchmark Times:
+  Start:    Tue Aug 16 12:09:57 2022 (1660651797)
+  Stop:     Tue Aug 16 12:10:05 2022 (1660651805)
+  Elapsed:  00:00:08 (8)
+  Reported: 7 234510000 7.23451
+ Success 103.stencil base ref ratio=17.28, runtime=7.234510, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x103.stencil
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.2643.opencl.ref.rsf
+Parsing flags for 103.stencil base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.2643.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.2643.log
+
+runspec finished at Tue Aug 16 12:10:40 2022; 44 total seconds elapsed

@@ -1,0 +1,75 @@
+runspec vv2989 started at Tue Aug 16 16:11:22 2022 on "ga100.novalocal"
+runspec is: /usr/accel/bin/runspec
+runspec: runspec --config=opencl-nvidia-a100.cfg --platform NVIDIA --iterations=1 --device GPU --size=ref --noreportable --tune=base --output_format csv hotspot -I
+toolset: linux-suse10-amd64
+
+Locating benchmarks...found 50 benchmarks in 3 benchsets.
+Reading config file '/usr/accel/config/opencl-nvidia-a100.cfg'
+Running "specperl /usr/accel/Docs/sysinfo" to gather system information.
+Read 82 total lines from the sysinfo program.
+Read 81 usable lines from the sysinfo program.
+
+Verbosity = 5
+Action    = validate
+Tune      = base
+Ext       = compsys
+Size      = ref
+Machine   = default
+benchmarks= 124.hotspot
+outputs   = csv
+username  = root
+Benchmarks selected: 124.hotspot
+Compiling Binaries
+
+------------------------------------------------------------------------
+  Up to date 124.hotspot base compsys default
+
+
+Setting Up Run Directories
+  Setting up 124.hotspot ref base compsys default: existing (run_base_ref_compsys.0000)
+
+-----------------------------------
+Running Benchmarks
+
+-----------------------------------
+  Running 124.hotspot ref base compsys default [Tue Aug 16 16:11:23 2022]
+Commands to run:
+    -C /usr/accel/benchspec/ACCEL/124.hotspot/run/run_base_ref_compsys.0000
+    -o hotspot.out -e hotspot.err ../run_base_ref_compsys.0000/hotspot_exe_base.compsys --platform NVIDIA --device GPU 2048 2 60000 temp_2048 power_2048 output.out (timed)
+**WARNING: environment variable 'TERMCAP' contains embedded CR or LF; they will be converted to spaces
+Specinvoke: /usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/124.hotspot/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q
+Issuing command '/usr/accel/bin/specinvoke -d /usr/accel/benchspec/ACCEL/124.hotspot/run/run_base_ref_compsys.0000 -e speccmds.err -o speccmds.stdout -f speccmds.cmd -C -q'
+Start command: Tue Aug 16 16:11:23 2022 (1660666283.38977)
+Stop command: Tue Aug 16 16:11:33 2022 (1660666293.54369)
+Elapsed time for command: 00:00:10 (10.1539270877838)
+Workload elapsed time (0:1) = 10.150782 seconds
+Copy 0 of 124.hotspot (base ref) run 1 finished at Tue Aug 16 16:11:33 2022.  Total elapsed time: 10.150782
+comparing files in '/usr/accel/benchspec/ACCEL/124.hotspot/run/run_base_ref_compsys.0000'
+comparing 'output.out' with abstol=0.025, binary=, calctol=, cw=, floatcompare=, ignorecase=, obiwan=, reltol=0.025, skipabstol=, skipobiwan=, skipreltol=, skiptol=
+Specinvoke: /usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/124.hotspot/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k
+Issuing command '/usr/accel/bin/specinvoke -E -d /usr/accel/benchspec/ACCEL/124.hotspot/run/run_base_ref_compsys.0000 -c 1 -e compare.err -o compare.stdout -f compare.cmd -k'
+Start command: Tue Aug 16 16:11:33 2022 (1660666293.55533)
+Stop command: Tue Aug 16 16:11:49 2022 (1660666309.22831)
+Elapsed time for command: 00:00:15 (15.6729888916016)
+Benchmark Times:
+  Start:    Tue Aug 16 16:11:23 2022 (1660666283)
+  Stop:     Tue Aug 16 16:11:33 2022 (1660666293)
+  Elapsed:  00:00:10 (10)
+  Reported: 10 150850000 10.15085
+ Success 124.hotspot base ref ratio=11.23, runtime=10.150850, power=0.00W, temp=0.00 degC, humidity=0.00%
+Success: 1x124.hotspot
+Producing Raw Reports
+mach: default
+  ext: compsys
+    size: ref
+      set: openmp
+      set: opencl
+        format: raw -> /usr/accel/result/ACCEL_OCL.2978.opencl.ref.rsf
+Parsing flags for 124.hotspot base: done
+Doing flag reduction: done
+        format: CSV -> /usr/accel/result/ACCEL_OCL.2978.opencl.ref.csv
+      set: openacc
+
+The log for this run is in /usr/accel/result/ACCEL.2978.log
+
+runspec finished at Tue Aug 16 16:11:49 2022; 27 total seconds elapsed
